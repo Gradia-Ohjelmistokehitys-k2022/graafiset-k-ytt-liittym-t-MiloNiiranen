@@ -293,6 +293,7 @@
             this.button4.TabIndex = 13;
             this.button4.Text = "Tallenna";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -328,7 +329,7 @@
             // poistuToolStripMenuItem
             // 
             this.poistuToolStripMenuItem.Name = "poistuToolStripMenuItem";
-            this.poistuToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.poistuToolStripMenuItem.Size = new System.Drawing.Size(162, 34);
             this.poistuToolStripMenuItem.Text = "Poistu";
             this.poistuToolStripMenuItem.Click += new System.EventHandler(this.poistuToolStripMenuItem_Click);
             // 

@@ -87,6 +87,7 @@ namespace _01_WindowsFormsPerusteet_Milon_tekemä_tehtävä
             textBox2.Text = "[Syötä elokuvan nimi]";
             textBox4.Text = "[Julkaisu vuosi]";
             textBox5.Text = "0";
+            textBox1.Text = "0";
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -156,7 +157,7 @@ namespace _01_WindowsFormsPerusteet_Milon_tekemä_tehtävä
         {
             if (string.IsNullOrWhiteSpace(textBox1.Text))
             {
-                textBox1.Text = "[Syötä elokuvan nimi]";
+                textBox1.Text = "0";
             }
         }
 
@@ -168,6 +169,38 @@ namespace _01_WindowsFormsPerusteet_Milon_tekemä_tehtävä
         private void poistuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "[Syötä elokuvan nimi]")
+            {
+                MessageBox.Show("Sinun pitää antaa elokuvan nimi!");
+            }
+            else if (textBox4.Text == "[Julkaisu vuosi]" || string.IsNullOrEmpty(textBox4.Text))
+            {
+                MessageBox.Show("Et ole syöttänyt mitään julkaisuvuosi-kenttään!");
+            }
+            else if (textBox5.Text == "0" || string.IsNullOrEmpty(textBox5.Text))
+            {
+                MessageBox.Show("Et ole syöttänyt mitään kesto-kenttään!");
+            }
+            else
+            {
+                if (!int.TryParse(textBox4.Text, out int vuosi))
+                {
+                    MessageBox.Show("Anna julkaisu vuosi numeroina!");
+                }
+
+                if (!int.TryParse(textBox5.Text, out int kesto))
+                {
+                    MessageBox.Show("Anna kesto numeroina!");
+                }
+                else
+                {
+                    MessageBox.Show("Kaikki OK");
+                }
+            }
         }
     }
 }
