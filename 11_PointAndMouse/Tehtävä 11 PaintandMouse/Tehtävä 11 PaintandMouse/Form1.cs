@@ -75,17 +75,6 @@ namespace Tehtävä_11_PaintandMouse
                             new SolidBrush(Color.Black), 8, 30);
 
         }
-
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (int.TryParse(textBox1.Text, out int xKoordinaatt1) && int.TryParse(textBox2.Text, out int yKoordinaatti))
-            {
-                piste = new Point(xKoordinaatt1, yKoordinaatti);
-                Invalidate();
-            }
-             
-        }
         
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -120,6 +109,58 @@ namespace Tehtävä_11_PaintandMouse
                 piste = e.Location;
                 Invalidate();
             }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.W)
+            {
+                piste.Y -= 1;
+            }
+            else if (e.KeyCode == Keys.S)
+            {
+               piste.Y += 1;
+            }
+            else if(e.KeyCode == Keys.D)
+            {
+                piste.X += 1;
+            }
+            else if ((e.KeyCode == Keys.A))
+            {
+                piste.X -= 1;
+            }
+            Invalidate();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(textBox1.Text, out int xKoordinaatt1) && int.TryParse(textBox2.Text, out int yKoordinaatti))
+            {
+                piste = new Point(xKoordinaatt1, yKoordinaatti);
+                Invalidate();
+            }
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.W)
+            {
+                piste.Y -= 1;
+            }
+            else if (e.KeyCode == Keys.S)
+            {
+                piste.Y += 1;
+            }
+            else if (e.KeyCode == Keys.D)
+            {
+                piste.X += 1;
+            }
+            else if ((e.KeyCode == Keys.A))
+            {
+                piste.X -= 1;
+            }
+            e.SuppressKeyPress = true;
+            Invalidate();
         }
     }
 }
