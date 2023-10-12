@@ -12,7 +12,7 @@ namespace Tehtävä_13_Picture
 {
     public partial class Form1 : Form
     {
-        private Point piste =new Point();
+        private Point piste = new Point();
         public Form1()
         {
             InitializeComponent();
