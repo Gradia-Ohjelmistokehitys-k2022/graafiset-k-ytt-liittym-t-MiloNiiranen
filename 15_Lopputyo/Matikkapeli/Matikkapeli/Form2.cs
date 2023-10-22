@@ -14,6 +14,7 @@ namespace Matikkapeli
     {
         int aika; // tämä on ajastimeen
         int oikeaVastaus;
+        private int oikeidenVastaustenLaskuri = 0;
 
         public Form2()
         {
@@ -31,7 +32,7 @@ namespace Matikkapeli
             int minuutit = aika / 60;
             int sekunnit = aika % 60;
             label1.Text = string.Format("{0:D2}:{1:D2}", minuutit, sekunnit);
-            // Ajasrin joka näyttää minuutit ja sekunnit labelillä
+            // Ajastin joka näyttää minuutit ja sekunnit labelillä
 
 
 
@@ -59,13 +60,33 @@ namespace Matikkapeli
                     MessageBox.Show("Oikein!");
                     lasku();
                     vastausTextBox.Clear();
+                    oikeidenVastaustenLaskuri++;
+                    tehtäviätehty.Text = $"{oikeidenVastaustenLaskuri}";
                 }
                 else
                 {
                     MessageBox.Show("Väärin. Yritä uudelleen.");
                     vastausTextBox.Clear();
                 }
+                if (oikeidenVastaustenLaskuri == 10)
+                {
+                    timer1.Stop();
+                    MessageBox.Show($"Aikasi on {aika / 60} minuutti ja { aika % 60} sekunttia");
+                    aika = 0;
+                    timer1.Start();
+                    oikeidenVastaustenLaskuri = 0;
+                    tehtäviätehty.Text = "0";
+                }
             }
+        }
+
+        private void Takaisinnappi_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            this.Hide();
+            this.Close();
+            form1.ShowDialog();
+            // Nappi josta pääsee takaisin aloitus ruutuun
         }
     }
 }

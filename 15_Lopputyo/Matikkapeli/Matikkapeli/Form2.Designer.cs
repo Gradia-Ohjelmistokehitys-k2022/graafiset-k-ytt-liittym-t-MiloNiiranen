@@ -34,6 +34,10 @@
             this.vastausTextBox = new System.Windows.Forms.TextBox();
             this.laskulabel = new System.Windows.Forms.Label();
             this.tarkistusnappi = new System.Windows.Forms.Button();
+            this.Takaisinnappi = new System.Windows.Forms.Button();
+            this.kysymystenmäärä = new System.Windows.Forms.Label();
+            this.tehtäviätehty = new System.Windows.Forms.Label();
+            this.merkki = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // timer1
@@ -77,11 +81,55 @@
             this.tarkistusnappi.UseVisualStyleBackColor = true;
             this.tarkistusnappi.Click += new System.EventHandler(this.tarkistusnappi_Click);
             // 
+            // Takaisinnappi
+            // 
+            this.Takaisinnappi.Location = new System.Drawing.Point(12, 9);
+            this.Takaisinnappi.Name = "Takaisinnappi";
+            this.Takaisinnappi.Size = new System.Drawing.Size(115, 30);
+            this.Takaisinnappi.TabIndex = 5;
+            this.Takaisinnappi.Text = " <-- Päävalikko";
+            this.Takaisinnappi.UseVisualStyleBackColor = true;
+            this.Takaisinnappi.Click += new System.EventHandler(this.Takaisinnappi_Click);
+            // 
+            // kysymystenmäärä
+            // 
+            this.kysymystenmäärä.AutoSize = true;
+            this.kysymystenmäärä.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.kysymystenmäärä.Location = new System.Drawing.Point(710, 30);
+            this.kysymystenmäärä.Name = "kysymystenmäärä";
+            this.kysymystenmäärä.Size = new System.Drawing.Size(35, 30);
+            this.kysymystenmäärä.TabIndex = 6;
+            this.kysymystenmäärä.Text = "10";
+            // 
+            // tehtäviätehty
+            // 
+            this.tehtäviätehty.AutoSize = true;
+            this.tehtäviätehty.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tehtäviätehty.Location = new System.Drawing.Point(656, 30);
+            this.tehtäviätehty.Name = "tehtäviätehty";
+            this.tehtäviätehty.Size = new System.Drawing.Size(24, 30);
+            this.tehtäviätehty.TabIndex = 7;
+            this.tehtäviätehty.Text = "0";
+            // 
+            // merkki
+            // 
+            this.merkki.AutoSize = true;
+            this.merkki.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.merkki.Location = new System.Drawing.Point(686, 30);
+            this.merkki.Name = "merkki";
+            this.merkki.Size = new System.Drawing.Size(18, 30);
+            this.merkki.TabIndex = 8;
+            this.merkki.Text = "|";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.merkki);
+            this.Controls.Add(this.tehtäviätehty);
+            this.Controls.Add(this.kysymystenmäärä);
+            this.Controls.Add(this.Takaisinnappi);
             this.Controls.Add(this.tarkistusnappi);
             this.Controls.Add(this.laskulabel);
             this.Controls.Add(this.vastausTextBox);
@@ -100,5 +148,9 @@
         private TextBox vastausTextBox;
         private Label laskulabel;
         private Button tarkistusnappi;
+        private Button Takaisinnappi;
+        private Label kysymystenmäärä;
+        private Label tehtäviätehty;
+        private Label merkki;
     }
 }
