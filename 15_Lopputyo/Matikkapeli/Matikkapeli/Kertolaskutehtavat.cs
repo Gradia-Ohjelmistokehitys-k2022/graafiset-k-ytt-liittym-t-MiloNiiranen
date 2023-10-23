@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Matikkapeli
 {
-    public partial class Form2 : Form
+    public partial class Kertolaskutehtavat : Form
     {
         int aika; // tämä on ajastimeen
         int oikeaVastaus;
         private int oikeidenVastaustenLaskuri = 0;
 
-        public Form2()
+        public Kertolaskutehtavat()
         {
             InitializeComponent();
 
             timer1.Start(); //Aloittaa ajastimen
             lasku();
-            
+
 
         }
 
@@ -47,9 +47,9 @@ namespace Matikkapeli
         {
             int luku1 = ArvoLuku();
             int luku2 = ArvoLuku();
-            oikeaVastaus = luku1 + luku2;
+            oikeaVastaus = luku1 * luku2;
 
-            laskulabel.Text = $"{luku1} + {luku2} ="; 
+            laskulabel.Text = $"{luku1} * {luku2} =";
         }
         private void tarkistusnappi_Click(object sender, EventArgs e) // nappi joka tarkistaa onko texboxin syöte oikein
         {
@@ -71,7 +71,7 @@ namespace Matikkapeli
                 if (oikeidenVastaustenLaskuri == 10)
                 {
                     timer1.Stop();
-                    MessageBox.Show($"Aikasi on {aika / 60} minuutti ja { aika % 60} sekunttia");
+                    MessageBox.Show($"Aikasi on {aika / 60} minuutti ja {aika % 60} sekunttia");
                     aika = 0;
                     timer1.Start();
                     oikeidenVastaustenLaskuri = 0;
@@ -82,7 +82,7 @@ namespace Matikkapeli
 
         private void Takaisinnappi_Click(object sender, EventArgs e)
         {
-            Form1 form1 = new Form1();
+            Aloitusruutu form1 = new Aloitusruutu();
             this.Hide();
             this.Close();
             form1.ShowDialog();

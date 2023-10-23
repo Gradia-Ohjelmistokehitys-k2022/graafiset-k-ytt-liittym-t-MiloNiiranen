@@ -1,6 +1,6 @@
 ﻿namespace Matikkapeli
 {
-    partial class Form1
+    partial class Aloitusruutu
     {
         /// <summary>
         ///  Required designer variable.
