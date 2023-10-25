@@ -28,87 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Plusnappi = new System.Windows.Forms.Button();
-            this.Miinusnappi = new System.Windows.Forms.Button();
-            this.Kertonappi = new System.Windows.Forms.Button();
-            this.jakonappi = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            label1 = new Label();
+            label2 = new Label();
+            Plusnappi = new Button();
+            Miinusnappi = new Button();
+            Kertonappi = new Button();
+            jakonappi = new Button();
+            SuspendLayout();
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Stencil", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(194, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(383, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tervetuloa Matikka Peliin";
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Impact", 18F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
+            label1.Location = new Point(314, 41);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(547, 77);
+            label1.TabIndex = 0;
+            label1.Text = "Tervetuloa Matikka Peliin";
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(220, 145);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(315, 39);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Valitse mitä laskutyyppiä haluat harjoitella";
+            label2.BackColor = Color.LightGray;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label2.ForeColor = Color.Black;
+            label2.Location = new Point(314, 242);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(450, 65);
+            label2.TabIndex = 1;
+            label2.Text = "Valitse mitä laskutyyppiä haluat harjoitella";
             // 
             // Plusnappi
             // 
-            this.Plusnappi.Location = new System.Drawing.Point(285, 187);
-            this.Plusnappi.Name = "Plusnappi";
-            this.Plusnappi.Size = new System.Drawing.Size(156, 41);
-            this.Plusnappi.TabIndex = 2;
-            this.Plusnappi.Text = "Plus +";
-            this.Plusnappi.UseVisualStyleBackColor = true;
-            this.Plusnappi.Click += new System.EventHandler(this.Plusnappi_Click);
+            Plusnappi.BackColor = Color.Red;
+            Plusnappi.BackgroundImageLayout = ImageLayout.None;
+            Plusnappi.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            Plusnappi.ForeColor = SystemColors.ActiveCaptionText;
+            Plusnappi.Location = new Point(407, 312);
+            Plusnappi.Margin = new Padding(4, 5, 4, 5);
+            Plusnappi.Name = "Plusnappi";
+            Plusnappi.Size = new Size(223, 68);
+            Plusnappi.TabIndex = 2;
+            Plusnappi.Text = "Plus +";
+            Plusnappi.UseVisualStyleBackColor = false;
+            Plusnappi.Click += Plusnappi_Click;
             // 
             // Miinusnappi
             // 
-            this.Miinusnappi.Location = new System.Drawing.Point(285, 234);
-            this.Miinusnappi.Name = "Miinusnappi";
-            this.Miinusnappi.Size = new System.Drawing.Size(156, 41);
-            this.Miinusnappi.TabIndex = 3;
-            this.Miinusnappi.Text = "Minus -";
-            this.Miinusnappi.UseVisualStyleBackColor = true;
-            this.Miinusnappi.Click += new System.EventHandler(this.Miinusnappi_Click);
+            Miinusnappi.BackColor = Color.Blue;
+            Miinusnappi.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            Miinusnappi.Location = new Point(407, 390);
+            Miinusnappi.Margin = new Padding(4, 5, 4, 5);
+            Miinusnappi.Name = "Miinusnappi";
+            Miinusnappi.Size = new Size(223, 68);
+            Miinusnappi.TabIndex = 3;
+            Miinusnappi.Text = "Minus -";
+            Miinusnappi.UseVisualStyleBackColor = false;
+            Miinusnappi.Click += Miinusnappi_Click;
             // 
             // Kertonappi
             // 
-            this.Kertonappi.Location = new System.Drawing.Point(285, 281);
-            this.Kertonappi.Name = "Kertonappi";
-            this.Kertonappi.Size = new System.Drawing.Size(156, 41);
-            this.Kertonappi.TabIndex = 4;
-            this.Kertonappi.Text = "Kerto *";
-            this.Kertonappi.UseVisualStyleBackColor = true;
-            this.Kertonappi.Click += new System.EventHandler(this.Kertonappi_Click);
+            Kertonappi.BackColor = Color.Yellow;
+            Kertonappi.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            Kertonappi.Location = new Point(407, 468);
+            Kertonappi.Margin = new Padding(4, 5, 4, 5);
+            Kertonappi.Name = "Kertonappi";
+            Kertonappi.Size = new Size(223, 68);
+            Kertonappi.TabIndex = 4;
+            Kertonappi.Text = "Kerto x";
+            Kertonappi.UseVisualStyleBackColor = false;
+            Kertonappi.Click += Kertonappi_Click;
             // 
             // jakonappi
             // 
-            this.jakonappi.Location = new System.Drawing.Point(285, 328);
-            this.jakonappi.Name = "jakonappi";
-            this.jakonappi.Size = new System.Drawing.Size(156, 41);
-            this.jakonappi.TabIndex = 5;
-            this.jakonappi.Text = "jako /";
-            this.jakonappi.UseVisualStyleBackColor = true;
-            this.jakonappi.Click += new System.EventHandler(this.jakonappi_Click);
+            jakonappi.BackColor = Color.FromArgb(0, 192, 0);
+            jakonappi.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            jakonappi.Location = new Point(407, 547);
+            jakonappi.Margin = new Padding(4, 5, 4, 5);
+            jakonappi.Name = "jakonappi";
+            jakonappi.Size = new Size(223, 68);
+            jakonappi.TabIndex = 5;
+            jakonappi.Text = "Jako /";
+            jakonappi.UseVisualStyleBackColor = false;
+            jakonappi.Click += jakonappi_Click;
             // 
-            // Form1
+            // Aloitusruutu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.jakonappi);
-            this.Controls.Add(this.Kertonappi);
-            this.Controls.Add(this.Miinusnappi);
-            this.Controls.Add(this.Plusnappi);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Name = "Form1";
-            this.Text = "Aloitus";
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = Properties.Resources.numero_tausta;
+            ClientSize = new Size(1143, 750);
+            Controls.Add(jakonappi);
+            Controls.Add(Kertonappi);
+            Controls.Add(Miinusnappi);
+            Controls.Add(Plusnappi);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "Aloitusruutu";
+            Text = "Aloitus";
+            ResumeLayout(false);
         }
 
         #endregion

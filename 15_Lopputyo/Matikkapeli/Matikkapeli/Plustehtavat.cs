@@ -20,7 +20,7 @@ namespace Matikkapeli
         {
             InitializeComponent();
 
-            timer1.Start(); //Aloittaa ajastimen
+            timer1.Start();
             lasku();
 
 

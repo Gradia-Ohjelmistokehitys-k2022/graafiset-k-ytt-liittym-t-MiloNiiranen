@@ -58,7 +58,7 @@
             // vastausTextBox
             // 
             vastausTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            vastausTextBox.Location = new Point(501, 328);
+            vastausTextBox.Location = new Point(520, 328);
             vastausTextBox.Margin = new Padding(4, 5, 4, 5);
             vastausTextBox.Name = "vastausTextBox";
             vastausTextBox.Size = new Size(44, 39);
@@ -70,9 +70,9 @@
             laskulabel.Location = new Point(400, 328);
             laskulabel.Margin = new Padding(4, 0, 4, 0);
             laskulabel.Name = "laskulabel";
-            laskulabel.Size = new Size(93, 38);
+            laskulabel.Size = new Size(112, 38);
             laskulabel.TabIndex = 3;
-            laskulabel.Text = "00 + 00";
+            laskulabel.Text = "00 + 00=";
             // 
             // tarkistusnappi
             // 

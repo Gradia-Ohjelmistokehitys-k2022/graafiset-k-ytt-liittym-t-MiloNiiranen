@@ -12,7 +12,7 @@ namespace Matikkapeli
             Plustehtavat form2 = new Plustehtavat();
             this.Hide();
             form2.ShowDialog();
-           
+
         }
 
         private void Miinusnappi_Click(object sender, EventArgs e)
@@ -24,14 +24,14 @@ namespace Matikkapeli
 
         private void Kertonappi_Click(object sender, EventArgs e)
         {
-            Kertolaskutehtavat form4 = new Kertolaskutehtavat();
+            Kertotehtavat form4 = new Kertotehtavat();
             this.Hide();
             form4.ShowDialog();
         }
 
         private void jakonappi_Click(object sender, EventArgs e)
         {
-            Jakotehtavat form5 = new Jakotehtavat();
+            jakotehtavat form5 = new jakotehtavat();
             this.Hide();
             form5.ShowDialog();
         }
