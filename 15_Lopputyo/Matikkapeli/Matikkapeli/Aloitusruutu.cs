@@ -35,5 +35,12 @@ namespace Matikkapeli
             this.Hide();
             form5.ShowDialog();
         }
+
+        private void Aloitusruutu_Load(object sender, EventArgs e)
+        {
+            string loggedInUser = Environment.UserName;
+            Käyttäjä.Text = "Kirjautunut käyttäjä: " + loggedInUser;
+        }
+
     }
 }

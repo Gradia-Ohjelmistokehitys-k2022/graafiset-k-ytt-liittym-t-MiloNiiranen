@@ -38,14 +38,14 @@
             tehtäviätehty2 = new Label();
             kysymystenmäärä = new Label();
             timer2 = new System.Windows.Forms.Timer(components);
+            labelParasaika = new Label();
             SuspendLayout();
             // 
             // tarkistusnappi3
             // 
-            tarkistusnappi3.Location = new Point(464, 443);
-            tarkistusnappi3.Margin = new Padding(4, 5, 4, 5);
+            tarkistusnappi3.Location = new Point(325, 266);
             tarkistusnappi3.Name = "tarkistusnappi3";
-            tarkistusnappi3.Size = new Size(149, 55);
+            tarkistusnappi3.Size = new Size(104, 33);
             tarkistusnappi3.TabIndex = 14;
             tarkistusnappi3.Text = "Tarkista";
             tarkistusnappi3.UseVisualStyleBackColor = true;
@@ -54,38 +54,34 @@
             // vastausTextBox3
             // 
             vastausTextBox3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            vastausTextBox3.Location = new Point(520, 328);
-            vastausTextBox3.Margin = new Padding(4, 5, 4, 5);
+            vastausTextBox3.Location = new Point(364, 197);
             vastausTextBox3.Name = "vastausTextBox3";
-            vastausTextBox3.Size = new Size(44, 39);
+            vastausTextBox3.Size = new Size(32, 29);
             vastausTextBox3.TabIndex = 20;
             // 
             // laskulabel3
             // 
             laskulabel3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            laskulabel3.Location = new Point(401, 331);
-            laskulabel3.Margin = new Padding(4, 0, 4, 0);
+            laskulabel3.Location = new Point(281, 199);
             laskulabel3.Name = "laskulabel3";
-            laskulabel3.Size = new Size(111, 38);
+            laskulabel3.Size = new Size(78, 23);
             laskulabel3.TabIndex = 19;
             laskulabel3.Text = "00 * 00=";
             // 
             // Ajastinlabel3
             // 
             Ajastinlabel3.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            Ajastinlabel3.Location = new Point(464, 15);
-            Ajastinlabel3.Margin = new Padding(4, 0, 4, 0);
+            Ajastinlabel3.Location = new Point(325, 9);
             Ajastinlabel3.Name = "Ajastinlabel3";
-            Ajastinlabel3.Size = new Size(143, 50);
+            Ajastinlabel3.Size = new Size(100, 30);
             Ajastinlabel3.TabIndex = 16;
             Ajastinlabel3.Text = "00.00";
             // 
             // Takaisinnappi2
             // 
-            Takaisinnappi2.Location = new Point(13, 14);
-            Takaisinnappi2.Margin = new Padding(4, 5, 4, 5);
+            Takaisinnappi2.Location = new Point(9, 8);
             Takaisinnappi2.Name = "Takaisinnappi2";
-            Takaisinnappi2.Size = new Size(164, 50);
+            Takaisinnappi2.Size = new Size(115, 30);
             Takaisinnappi2.TabIndex = 15;
             Takaisinnappi2.Text = " <-- Päävalikko";
             Takaisinnappi2.UseVisualStyleBackColor = true;
@@ -95,10 +91,9 @@
             // 
             merkki.AutoSize = true;
             merkki.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            merkki.Location = new Point(982, 50);
-            merkki.Margin = new Padding(4, 0, 4, 0);
+            merkki.Location = new Point(687, 30);
             merkki.Name = "merkki";
-            merkki.Size = new Size(28, 45);
+            merkki.Size = new Size(18, 30);
             merkki.TabIndex = 23;
             merkki.Text = "|";
             // 
@@ -106,10 +101,9 @@
             // 
             tehtäviätehty2.AutoSize = true;
             tehtäviätehty2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tehtäviätehty2.Location = new Point(937, 50);
-            tehtäviätehty2.Margin = new Padding(4, 0, 4, 0);
+            tehtäviätehty2.Location = new Point(656, 30);
             tehtäviätehty2.Name = "tehtäviätehty2";
-            tehtäviätehty2.Size = new Size(37, 45);
+            tehtäviätehty2.Size = new Size(24, 30);
             tehtäviätehty2.TabIndex = 22;
             tehtäviätehty2.Text = "0";
             // 
@@ -117,10 +111,9 @@
             // 
             kysymystenmäärä.AutoSize = true;
             kysymystenmäärä.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            kysymystenmäärä.Location = new Point(1018, 50);
-            kysymystenmäärä.Margin = new Padding(4, 0, 4, 0);
+            kysymystenmäärä.Location = new Point(713, 30);
             kysymystenmäärä.Name = "kysymystenmäärä";
-            kysymystenmäärä.Size = new Size(54, 45);
+            kysymystenmäärä.Size = new Size(35, 30);
             kysymystenmäärä.TabIndex = 21;
             kysymystenmäärä.Text = "10";
             // 
@@ -129,11 +122,21 @@
             timer2.Interval = 1000;
             timer2.Tick += timer2_Tick;
             // 
+            // labelParasaika
+            // 
+            labelParasaika.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelParasaika.Location = new Point(12, 205);
+            labelParasaika.Name = "labelParasaika";
+            labelParasaika.Size = new Size(126, 21);
+            labelParasaika.TabIndex = 24;
+            labelParasaika.Text = "Paras aika: ";
+            // 
             // Kertotehtavat
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1186, 750);
+            ClientSize = new Size(830, 450);
+            Controls.Add(labelParasaika);
             Controls.Add(merkki);
             Controls.Add(tehtäviätehty2);
             Controls.Add(kysymystenmäärä);
@@ -142,6 +145,7 @@
             Controls.Add(laskulabel3);
             Controls.Add(Ajastinlabel3);
             Controls.Add(Takaisinnappi2);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Kertotehtavat";
             Text = "Kertotehtavat";
             ResumeLayout(false);
@@ -159,5 +163,6 @@
         private Label tehtäviätehty2;
         private Label kysymystenmäärä;
         private System.Windows.Forms.Timer timer2;
+        private Label labelParasaika;
     }
 }

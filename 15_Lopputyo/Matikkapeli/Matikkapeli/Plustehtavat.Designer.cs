@@ -30,7 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             timer1 = new System.Windows.Forms.Timer(components);
-            label1 = new Label();
+            Ajastin = new Label();
             vastausTextBox = new TextBox();
             laskulabel = new Label();
             tarkistusnappi = new Button();
@@ -38,6 +38,7 @@
             kysymystenmäärä = new Label();
             tehtäviätehty = new Label();
             merkki = new Label();
+            labelParasaika = new Label();
             SuspendLayout();
             // 
             // timer1
@@ -45,41 +46,37 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
-            // label1
+            // Ajastin
             // 
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(464, 15);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(143, 50);
-            label1.TabIndex = 0;
-            label1.Text = "00.00";
+            Ajastin.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            Ajastin.Location = new Point(325, 9);
+            Ajastin.Name = "Ajastin";
+            Ajastin.Size = new Size(100, 30);
+            Ajastin.TabIndex = 0;
+            Ajastin.Text = "00.00";
             // 
             // vastausTextBox
             // 
             vastausTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            vastausTextBox.Location = new Point(520, 328);
-            vastausTextBox.Margin = new Padding(4, 5, 4, 5);
+            vastausTextBox.Location = new Point(364, 197);
             vastausTextBox.Name = "vastausTextBox";
-            vastausTextBox.Size = new Size(44, 39);
+            vastausTextBox.Size = new Size(32, 29);
             vastausTextBox.TabIndex = 2;
             // 
             // laskulabel
             // 
             laskulabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            laskulabel.Location = new Point(400, 328);
-            laskulabel.Margin = new Padding(4, 0, 4, 0);
+            laskulabel.Location = new Point(280, 197);
             laskulabel.Name = "laskulabel";
-            laskulabel.Size = new Size(112, 38);
+            laskulabel.Size = new Size(78, 23);
             laskulabel.TabIndex = 3;
             laskulabel.Text = "00 + 00=";
             // 
             // tarkistusnappi
             // 
-            tarkistusnappi.Location = new Point(464, 443);
-            tarkistusnappi.Margin = new Padding(4, 5, 4, 5);
+            tarkistusnappi.Location = new Point(325, 266);
             tarkistusnappi.Name = "tarkistusnappi";
-            tarkistusnappi.Size = new Size(149, 55);
+            tarkistusnappi.Size = new Size(104, 33);
             tarkistusnappi.TabIndex = 4;
             tarkistusnappi.Text = "Tarkista";
             tarkistusnappi.UseVisualStyleBackColor = true;
@@ -87,10 +84,9 @@
             // 
             // Takaisinnappi
             // 
-            Takaisinnappi.Location = new Point(17, 15);
-            Takaisinnappi.Margin = new Padding(4, 5, 4, 5);
+            Takaisinnappi.Location = new Point(12, 9);
             Takaisinnappi.Name = "Takaisinnappi";
-            Takaisinnappi.Size = new Size(164, 50);
+            Takaisinnappi.Size = new Size(115, 30);
             Takaisinnappi.TabIndex = 5;
             Takaisinnappi.Text = " <-- Päävalikko";
             Takaisinnappi.UseVisualStyleBackColor = true;
@@ -100,10 +96,9 @@
             // 
             kysymystenmäärä.AutoSize = true;
             kysymystenmäärä.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            kysymystenmäärä.Location = new Point(1014, 50);
-            kysymystenmäärä.Margin = new Padding(4, 0, 4, 0);
+            kysymystenmäärä.Location = new Point(710, 30);
             kysymystenmäärä.Name = "kysymystenmäärä";
-            kysymystenmäärä.Size = new Size(54, 45);
+            kysymystenmäärä.Size = new Size(35, 30);
             kysymystenmäärä.TabIndex = 6;
             kysymystenmäärä.Text = "10";
             // 
@@ -111,10 +106,9 @@
             // 
             tehtäviätehty.AutoSize = true;
             tehtäviätehty.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tehtäviätehty.Location = new Point(937, 50);
-            tehtäviätehty.Margin = new Padding(4, 0, 4, 0);
+            tehtäviätehty.Location = new Point(656, 30);
             tehtäviätehty.Name = "tehtäviätehty";
-            tehtäviätehty.Size = new Size(37, 45);
+            tehtäviätehty.Size = new Size(24, 30);
             tehtäviätehty.TabIndex = 7;
             tehtäviätehty.Text = "0";
             // 
@@ -122,18 +116,27 @@
             // 
             merkki.AutoSize = true;
             merkki.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            merkki.Location = new Point(980, 50);
-            merkki.Margin = new Padding(4, 0, 4, 0);
+            merkki.Location = new Point(686, 30);
             merkki.Name = "merkki";
-            merkki.Size = new Size(28, 45);
+            merkki.Size = new Size(18, 30);
             merkki.TabIndex = 8;
             merkki.Text = "|";
             // 
+            // labelParasaika
+            // 
+            labelParasaika.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelParasaika.Location = new Point(12, 205);
+            labelParasaika.Name = "labelParasaika";
+            labelParasaika.Size = new Size(126, 21);
+            labelParasaika.TabIndex = 9;
+            labelParasaika.Text = "Paras aika: ";
+            // 
             // Plustehtavat
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1186, 750);
+            ClientSize = new Size(830, 450);
+            Controls.Add(labelParasaika);
             Controls.Add(merkki);
             Controls.Add(tehtäviätehty);
             Controls.Add(kysymystenmäärä);
@@ -141,8 +144,7 @@
             Controls.Add(tarkistusnappi);
             Controls.Add(laskulabel);
             Controls.Add(vastausTextBox);
-            Controls.Add(label1);
-            Margin = new Padding(4, 5, 4, 5);
+            Controls.Add(Ajastin);
             Name = "Plustehtavat";
             Text = "Plus";
             ResumeLayout(false);
@@ -152,7 +154,7 @@
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private Label label1;
+        private Label Ajastin;
         private TextBox vastausTextBox;
         private Label laskulabel;
         private Button tarkistusnappi;
@@ -160,5 +162,6 @@
         private Label kysymystenmäärä;
         private Label tehtäviätehty;
         private Label merkki;
+        private Label labelParasaika;
     }
 }

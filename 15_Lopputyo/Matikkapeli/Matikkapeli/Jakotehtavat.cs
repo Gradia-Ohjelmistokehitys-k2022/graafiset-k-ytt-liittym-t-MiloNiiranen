@@ -12,9 +12,10 @@ namespace Matikkapeli
 {
     public partial class jakotehtavat : Form
     {
-        int aika; // tämä on ajastimeen
-        int oikeaVastaus;
-        private int oikeidenVastaustenLaskuri = 0;
+        int _aika; // tämä on ajastimeen
+        int _oikeaVastaus;
+        private int _oikeidenVastaustenLaskuri = 0;
+        List<int> _ajat = new List<int>();
 
         public jakotehtavat()
         {
@@ -25,9 +26,9 @@ namespace Matikkapeli
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int t = aika++;
-            int minuutit = aika / 60;
-            int sekunnit = aika % 60;
+            int t = _aika++;
+            int minuutit = _aika / 60;
+            int sekunnit = _aika % 60;
             label1.Text = string.Format("{0:D2}:{1:D2}", minuutit, sekunnit);
             // Ajastin joka näyttää minuutit ja sekunnit labelillä
 
@@ -44,7 +45,7 @@ namespace Matikkapeli
         {
             int luku1 = ArvoLuku();
             int luku2 = ArvoLuku();
-            oikeaVastaus = luku1 / luku2;
+            _oikeaVastaus = luku1 / luku2;
 
             laskulabel.Text = $"{luku1} / {luku2} =";
         }
@@ -52,29 +53,44 @@ namespace Matikkapeli
         {
             if (int.TryParse(vastausTextBox.Text, out int kayttajanVastaus))
             {
-                if (kayttajanVastaus == oikeaVastaus)
+                if (kayttajanVastaus == _oikeaVastaus)
                 {
                     MessageBox.Show("Oikein!");
                     lasku();
                     vastausTextBox.Clear();
-                    oikeidenVastaustenLaskuri++;
-                    tehtäviätehty.Text = $"{oikeidenVastaustenLaskuri}";
+                    _oikeidenVastaustenLaskuri++;
+                    tehtäviätehty.Text = $"{_oikeidenVastaustenLaskuri}";
                 }
                 else
                 {
                     MessageBox.Show("Väärin. Yritä uudelleen.");
                     vastausTextBox.Clear();
                 }
-                if (oikeidenVastaustenLaskuri == 10)
+                if (_oikeidenVastaustenLaskuri == 10)
                 {
                     timer1.Stop();
-                    MessageBox.Show($"Aikasi on {aika / 60} minuutti ja {aika % 60} sekunttia");
-                    aika = 0;
+                    MessageBox.Show($"Aikasi on {_aika / 60} minuutti ja {_aika % 60} sekunttia");
+                    TallennaAika();
+                    _aika = 0;
                     timer1.Start();
-                    oikeidenVastaustenLaskuri = 0;
+                    _oikeidenVastaustenLaskuri = 0;
                     tehtäviätehty.Text = "0";
                 }
             }
+        }
+
+        private void TallennaAika()
+        {
+            _ajat.Add(_aika);
+
+
+
+            int pieninAika = _ajat.Min();
+
+            int minuutit = pieninAika / 60;
+            int sekuntit = pieninAika % 60;
+
+            labelParasaika.Text = $"Paras aika: {minuutit:D2}:{sekuntit:D2}";
         }
 
         private void Takaisinnappi_Click(object sender, EventArgs e)
