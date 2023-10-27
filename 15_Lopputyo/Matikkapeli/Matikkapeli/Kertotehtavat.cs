@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Matikkapeli
 {
@@ -56,7 +57,7 @@ namespace Matikkapeli
             {
                 if (kayttajanVastaus == _oikeaVastaus)
                 {
-                    MessageBox.Show("Oikein!");
+                    OikeinAani();
                     lasku();
                     vastausTextBox3.Clear();
                     _oikeidenVastaustenLaskuri++;
@@ -64,7 +65,7 @@ namespace Matikkapeli
                 }
                 else
                 {
-                    MessageBox.Show("Väärin. Yritä uudelleen.");
+                    vaarinAani();
                     vastausTextBox3.Clear();
                 }
                 if (_oikeidenVastaustenLaskuri == 10)
@@ -90,7 +91,19 @@ namespace Matikkapeli
             int minuutit = pieninAika / 60;
             int sekuntit = pieninAika % 60;
 
-            labelParasaika.Text = $"Paras aika: {minuutit:D2}:{sekuntit:D2}";
+            labelParasaikaKerto.Text = $"Paras aika: {minuutit:D2}:{sekuntit:D2}";
+        }
+
+        private void OikeinAani()
+        {
+            SoundPlayer aani = new SoundPlayer(@"C:\Users\Administrator\source\repos\graafiset-k-ytt-liittym-t-MiloNiiranen\15_Lopputyo\Matikkapeli\Ääni-tehosteet\1450b9bc-16c5-4e33-bdae-e80ac2344bc7.wav");
+            aani.Play();
+        }
+
+        private void vaarinAani()
+        {
+            SoundPlayer aani = new SoundPlayer(@"C:\Users\Administrator\source\repos\graafiset-k-ytt-liittym-t-MiloNiiranen\15_Lopputyo\Matikkapeli\Ääni-tehosteet\2aa79859-239d-45f3-99c8-3cacd6a4c3a0.wav");
+            aani.Play();
         }
 
         private void Takaisinnappi_Click(object sender, EventArgs e)

@@ -39,7 +39,7 @@
             label1 = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
             label2 = new Label();
-            labelParasaika = new Label();
+            labelParasaikaJako = new Label();
             SuspendLayout();
             // 
             // merkki
@@ -133,21 +133,21 @@
             label2.TabIndex = 17;
             label2.Text = "Huom! anna vastaus kokonaislukuna";
             // 
-            // labelParasaika
+            // labelParasaikaJako
             // 
-            labelParasaika.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelParasaika.Location = new Point(12, 205);
-            labelParasaika.Name = "labelParasaika";
-            labelParasaika.Size = new Size(126, 21);
-            labelParasaika.TabIndex = 18;
-            labelParasaika.Text = "Paras aika: ";
+            labelParasaikaJako.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelParasaikaJako.Location = new Point(12, 205);
+            labelParasaikaJako.Name = "labelParasaikaJako";
+            labelParasaikaJako.Size = new Size(126, 21);
+            labelParasaikaJako.TabIndex = 18;
+            labelParasaikaJako.Text = "Paras aika: ";
             // 
             // jakotehtavat
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(830, 450);
-            Controls.Add(labelParasaika);
+            Controls.Add(labelParasaikaJako);
             Controls.Add(label2);
             Controls.Add(merkki);
             Controls.Add(tehtäviätehty);
@@ -157,7 +157,7 @@
             Controls.Add(laskulabel);
             Controls.Add(vastausTextBox);
             Controls.Add(label1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "jakotehtavat";
             Text = "jakotehtavat";
             ResumeLayout(false);
@@ -176,6 +176,6 @@
         private Label label1;
         private System.Windows.Forms.Timer timer1;
         private Label label2;
-        private Label labelParasaika;
+        private Label labelParasaikaJako;
     }
 }

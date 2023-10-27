@@ -38,7 +38,7 @@
             kysymystenmäärä = new Label();
             tehtäviätehty = new Label();
             merkki = new Label();
-            labelParasaika = new Label();
+            labelParasaikaPlus = new Label();
             SuspendLayout();
             // 
             // timer1
@@ -122,21 +122,21 @@
             merkki.TabIndex = 8;
             merkki.Text = "|";
             // 
-            // labelParasaika
+            // labelParasaikaPlus
             // 
-            labelParasaika.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelParasaika.Location = new Point(12, 205);
-            labelParasaika.Name = "labelParasaika";
-            labelParasaika.Size = new Size(126, 21);
-            labelParasaika.TabIndex = 9;
-            labelParasaika.Text = "Paras aika: ";
+            labelParasaikaPlus.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelParasaikaPlus.Location = new Point(12, 205);
+            labelParasaikaPlus.Name = "labelParasaikaPlus";
+            labelParasaikaPlus.Size = new Size(126, 21);
+            labelParasaikaPlus.TabIndex = 9;
+            labelParasaikaPlus.Text = "Paras aika: ";
             // 
             // Plustehtavat
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(830, 450);
-            Controls.Add(labelParasaika);
+            Controls.Add(labelParasaikaPlus);
             Controls.Add(merkki);
             Controls.Add(tehtäviätehty);
             Controls.Add(kysymystenmäärä);
@@ -162,6 +162,6 @@
         private Label kysymystenmäärä;
         private Label tehtäviätehty;
         private Label merkki;
-        private Label labelParasaika;
+        private Label labelParasaikaPlus;
     }
 }

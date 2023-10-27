@@ -38,7 +38,7 @@
             tehtäviätehty2 = new Label();
             kysymystenmäärä = new Label();
             timer2 = new System.Windows.Forms.Timer(components);
-            labelParasaika = new Label();
+            labelParasaikaKerto = new Label();
             SuspendLayout();
             // 
             // tarkistusnappi3
@@ -122,21 +122,21 @@
             timer2.Interval = 1000;
             timer2.Tick += timer2_Tick;
             // 
-            // labelParasaika
+            // labelParasaikaKerto
             // 
-            labelParasaika.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelParasaika.Location = new Point(12, 205);
-            labelParasaika.Name = "labelParasaika";
-            labelParasaika.Size = new Size(126, 21);
-            labelParasaika.TabIndex = 24;
-            labelParasaika.Text = "Paras aika: ";
+            labelParasaikaKerto.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelParasaikaKerto.Location = new Point(12, 205);
+            labelParasaikaKerto.Name = "labelParasaikaKerto";
+            labelParasaikaKerto.Size = new Size(126, 21);
+            labelParasaikaKerto.TabIndex = 24;
+            labelParasaikaKerto.Text = "Paras aika: ";
             // 
             // Kertotehtavat
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(830, 450);
-            Controls.Add(labelParasaika);
+            Controls.Add(labelParasaikaKerto);
             Controls.Add(merkki);
             Controls.Add(tehtäviätehty2);
             Controls.Add(kysymystenmäärä);
@@ -145,7 +145,7 @@
             Controls.Add(laskulabel3);
             Controls.Add(Ajastinlabel3);
             Controls.Add(Takaisinnappi2);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Kertotehtavat";
             Text = "Kertotehtavat";
             ResumeLayout(false);
@@ -163,6 +163,6 @@
         private Label tehtäviätehty2;
         private Label kysymystenmäärä;
         private System.Windows.Forms.Timer timer2;
-        private Label labelParasaika;
+        private Label labelParasaikaKerto;
     }
 }

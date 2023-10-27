@@ -38,7 +38,7 @@
             vastausTextBox2 = new TextBox();
             tarkistusnappi2 = new Button();
             timer2 = new System.Windows.Forms.Timer(components);
-            labelParasaika = new Label();
+            labelParasaikaMiinus = new Label();
             SuspendLayout();
             // 
             // Takaisinnappi2
@@ -122,21 +122,21 @@
             timer2.Interval = 1000;
             timer2.Tick += timer2_Tick;
             // 
-            // labelParasaika
+            // labelParasaikaMiinus
             // 
-            labelParasaika.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelParasaika.Location = new Point(12, 205);
-            labelParasaika.Name = "labelParasaika";
-            labelParasaika.Size = new Size(126, 21);
-            labelParasaika.TabIndex = 14;
-            labelParasaika.Text = "Paras aika: ";
+            labelParasaikaMiinus.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            labelParasaikaMiinus.Location = new Point(12, 205);
+            labelParasaikaMiinus.Name = "labelParasaikaMiinus";
+            labelParasaikaMiinus.Size = new Size(126, 21);
+            labelParasaikaMiinus.TabIndex = 14;
+            labelParasaikaMiinus.Text = "Paras aika: ";
             // 
             // Miinustehtavat
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(830, 450);
-            Controls.Add(labelParasaika);
+            Controls.Add(labelParasaikaMiinus);
             Controls.Add(tarkistusnappi2);
             Controls.Add(vastausTextBox2);
             Controls.Add(laskulabel2);
@@ -145,7 +145,7 @@
             Controls.Add(kysymystenmäärä);
             Controls.Add(Ajastinlabel2);
             Controls.Add(Takaisinnappi2);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Miinustehtavat";
             Text = "Miinustehtavat";
             ResumeLayout(false);
@@ -163,6 +163,6 @@
         private TextBox vastausTextBox2;
         private Button tarkistusnappi2;
         private System.Windows.Forms.Timer timer2;
-        private Label labelParasaika;
+        private Label labelParasaikaMiinus;
     }
 }
