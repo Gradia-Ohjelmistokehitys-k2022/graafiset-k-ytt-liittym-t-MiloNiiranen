@@ -96,14 +96,17 @@ namespace Matikkapeli
         {
             _ajat.Add(_aika);
 
-
-
             int pieninAika = _ajat.Min();
-
             int minuutit = pieninAika / 60;
             int sekuntit = pieninAika % 60;
 
             labelParasaikaPlus.Text = $"Paras aika: {minuutit:D2}:{sekuntit:D2}";
+
+            using (StreamWriter sw = new StreamWriter("Parhaat_ajat.txt"))
+            {
+                sw.WriteLine(labelParasaikaPlus.Text);
+            }
+
         }
 
         private void OikeinAani()

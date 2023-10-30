@@ -89,12 +89,11 @@ namespace Matikkapeli.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to .
         /// </summary>
-        internal static System.Drawing.Bitmap plus_merkki {
+        internal static string Parhaat_ajat {
             get {
-                object obj = ResourceManager.GetObject("plus merkki", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("Parhaat_ajat", resourceCulture);
             }
         }
     }
