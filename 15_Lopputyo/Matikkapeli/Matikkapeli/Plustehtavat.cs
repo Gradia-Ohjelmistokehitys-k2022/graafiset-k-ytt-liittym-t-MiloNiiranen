@@ -108,13 +108,13 @@ namespace Matikkapeli
 
         private void OikeinAani()
         {
-            SoundPlayer aani = new SoundPlayer(@"C:\Users\Administrator\source\repos\graafiset-k-ytt-liittym-t-MiloNiiranen\15_Lopputyo\Matikkapeli\Ääni-tehosteet\1450b9bc-16c5-4e33-bdae-e80ac2344bc7.wav");
+            SoundPlayer aani = new SoundPlayer(Matikkapeli.Properties.Resources._1450b9bc_16c5_4e33_bdae_e80ac2344bc7);
             aani.Play();
         }
 
         private void vaarinAani()
         {
-            SoundPlayer aani = new SoundPlayer(@"C:\Users\Administrator\source\repos\graafiset-k-ytt-liittym-t-MiloNiiranen\15_Lopputyo\Matikkapeli\Ääni-tehosteet\2aa79859-239d-45f3-99c8-3cacd6a4c3a0.wav");
+            SoundPlayer aani = new SoundPlayer(Matikkapeli.Properties.Resources._2aa79859_239d_45f3_99c8_3cacd6a4c3a0);
             aani.Play();
         }
 

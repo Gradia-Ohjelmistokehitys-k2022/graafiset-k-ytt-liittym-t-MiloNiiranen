@@ -61,6 +61,24 @@ namespace Matikkapeli.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _1450b9bc_16c5_4e33_bdae_e80ac2344bc7 {
+            get {
+                return ResourceManager.GetStream("_1450b9bc_16c5_4e33_bdae_e80ac2344bc7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _2aa79859_239d_45f3_99c8_3cacd6a4c3a0 {
+            get {
+                return ResourceManager.GetStream("_2aa79859_239d_45f3_99c8_3cacd6a4c3a0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap numero_tausta {
