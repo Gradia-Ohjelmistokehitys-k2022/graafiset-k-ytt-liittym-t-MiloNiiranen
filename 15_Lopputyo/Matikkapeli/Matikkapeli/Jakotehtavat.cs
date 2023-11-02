@@ -16,13 +16,40 @@ namespace Matikkapeli
         int _aika; // tämä on ajastimeen
         int _oikeaVastaus;
         private int _oikeidenVastaustenLaskuri = 0;
-        List<int> _ajat = new List<int>();
+        List<int> _ajat;
+        MathUtility mathUtility;
 
         public jakotehtavat()
         {
             InitializeComponent();
+            mathUtility = new MathUtility();
+            _ajat = new List<int>();
+
             timer1.Start();
             lasku();
+
+            LataaAjat();
+            AsetaParasAikaLabelille();
+        }
+
+        private void LataaAjat()
+        {
+            _ajat = mathUtility.LataaAjatJako();
+        }
+        private void AsetaParasAikaLabelille()
+        {
+            if (_ajat.Count > 0)
+            {
+                int pieninAika = _ajat.Min();
+                int minuutit = pieninAika / 60;
+                int sekuntit = pieninAika % 60;
+
+                labelParasaikaJako.Text = $"Paras aika: {minuutit:D2}:{sekuntit:D2}";
+            }
+            else
+            {
+                labelParasaikaJako.Text = "Paras aika: -";
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -71,7 +98,7 @@ namespace Matikkapeli
                 {
                     timer1.Stop();
                     MessageBox.Show($"Aikasi on {_aika / 60} minuutti ja {_aika % 60} sekunttia");
-                    TallennaAika();
+                    mathUtility.TallennaAikaJako(_aika);
                     _aika = 0;
                     timer1.Start();
                     _oikeidenVastaustenLaskuri = 0;
@@ -80,29 +107,15 @@ namespace Matikkapeli
             }
         }
 
-        private void TallennaAika()
-        {
-            _ajat.Add(_aika);
-
-
-
-            int pieninAika = _ajat.Min();
-
-            int minuutit = pieninAika / 60;
-            int sekuntit = pieninAika % 60;
-
-            labelParasaikaJako.Text = $"Paras aika: {minuutit:D2}:{sekuntit:D2}";
-        }
-
         private void OikeinAani()
         {
-            SoundPlayer aani = new SoundPlayer(@"C:\Users\Administrator\source\repos\graafiset-k-ytt-liittym-t-MiloNiiranen\15_Lopputyo\Matikkapeli\Ääni-tehosteet\1450b9bc-16c5-4e33-bdae-e80ac2344bc7.wav");
+            SoundPlayer aani = new SoundPlayer(Matikkapeli.Properties.Resources._1450b9bc_16c5_4e33_bdae_e80ac2344bc7);
             aani.Play();
         }
 
         private void vaarinAani()
         {
-            SoundPlayer aani = new SoundPlayer(@"C:\Users\Administrator\source\repos\graafiset-k-ytt-liittym-t-MiloNiiranen\15_Lopputyo\Matikkapeli\Ääni-tehosteet\2aa79859-239d-45f3-99c8-3cacd6a4c3a0.wav");
+            SoundPlayer aani = new SoundPlayer(Matikkapeli.Properties.Resources._2aa79859_239d_45f3_99c8_3cacd6a4c3a0);
             aani.Play();
         }
 

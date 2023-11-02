@@ -46,9 +46,10 @@
             // 
             merkki.AutoSize = true;
             merkki.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            merkki.Location = new Point(687, 30);
+            merkki.Location = new Point(981, 50);
+            merkki.Margin = new Padding(4, 0, 4, 0);
             merkki.Name = "merkki";
-            merkki.Size = new Size(18, 30);
+            merkki.Size = new Size(28, 45);
             merkki.TabIndex = 16;
             merkki.Text = "|";
             // 
@@ -56,9 +57,10 @@
             // 
             tehtäviätehty.AutoSize = true;
             tehtäviätehty.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            tehtäviätehty.Location = new Point(656, 30);
+            tehtäviätehty.Location = new Point(937, 50);
+            tehtäviätehty.Margin = new Padding(4, 0, 4, 0);
             tehtäviätehty.Name = "tehtäviätehty";
-            tehtäviätehty.Size = new Size(24, 30);
+            tehtäviätehty.Size = new Size(37, 45);
             tehtäviätehty.TabIndex = 15;
             tehtäviätehty.Text = "0";
             // 
@@ -66,17 +68,19 @@
             // 
             kysymystenmäärä.AutoSize = true;
             kysymystenmäärä.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            kysymystenmäärä.Location = new Point(713, 30);
+            kysymystenmäärä.Location = new Point(1019, 50);
+            kysymystenmäärä.Margin = new Padding(4, 0, 4, 0);
             kysymystenmäärä.Name = "kysymystenmäärä";
-            kysymystenmäärä.Size = new Size(35, 30);
+            kysymystenmäärä.Size = new Size(54, 45);
             kysymystenmäärä.TabIndex = 14;
             kysymystenmäärä.Text = "10";
             // 
             // Takaisinnappi
             // 
-            Takaisinnappi.Location = new Point(9, 8);
+            Takaisinnappi.Location = new Point(13, 13);
+            Takaisinnappi.Margin = new Padding(4, 5, 4, 5);
             Takaisinnappi.Name = "Takaisinnappi";
-            Takaisinnappi.Size = new Size(115, 30);
+            Takaisinnappi.Size = new Size(164, 50);
             Takaisinnappi.TabIndex = 13;
             Takaisinnappi.Text = " <-- Päävalikko";
             Takaisinnappi.UseVisualStyleBackColor = true;
@@ -84,9 +88,10 @@
             // 
             // tarkistusnappi
             // 
-            tarkistusnappi.Location = new Point(321, 268);
+            tarkistusnappi.Location = new Point(459, 447);
+            tarkistusnappi.Margin = new Padding(4, 5, 4, 5);
             tarkistusnappi.Name = "tarkistusnappi";
-            tarkistusnappi.Size = new Size(104, 33);
+            tarkistusnappi.Size = new Size(149, 55);
             tarkistusnappi.TabIndex = 12;
             tarkistusnappi.Text = "Tarkista";
             tarkistusnappi.UseVisualStyleBackColor = true;
@@ -95,26 +100,29 @@
             // laskulabel
             // 
             laskulabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            laskulabel.Location = new Point(280, 197);
+            laskulabel.Location = new Point(400, 328);
+            laskulabel.Margin = new Padding(4, 0, 4, 0);
             laskulabel.Name = "laskulabel";
-            laskulabel.Size = new Size(78, 23);
+            laskulabel.Size = new Size(111, 38);
             laskulabel.TabIndex = 11;
             laskulabel.Text = "00 / 00=";
             // 
             // vastausTextBox
             // 
             vastausTextBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            vastausTextBox.Location = new Point(364, 197);
+            vastausTextBox.Location = new Point(520, 328);
+            vastausTextBox.Margin = new Padding(4, 5, 4, 5);
             vastausTextBox.Name = "vastausTextBox";
-            vastausTextBox.Size = new Size(32, 29);
+            vastausTextBox.Size = new Size(44, 39);
             vastausTextBox.TabIndex = 10;
             // 
             // label1
             // 
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(325, 9);
+            label1.Location = new Point(464, 15);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(100, 30);
+            label1.Size = new Size(143, 50);
             label1.TabIndex = 9;
             label1.Text = "00.00";
             // 
@@ -126,27 +134,27 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(414, 200);
-            label2.Margin = new Padding(2, 0, 2, 0);
+            label2.Location = new Point(591, 333);
             label2.Name = "label2";
-            label2.Size = new Size(201, 15);
+            label2.Size = new Size(302, 25);
             label2.TabIndex = 17;
             label2.Text = "Huom! anna vastaus kokonaislukuna";
             // 
             // labelParasaikaJako
             // 
             labelParasaikaJako.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            labelParasaikaJako.Location = new Point(12, 205);
+            labelParasaikaJako.Location = new Point(17, 342);
+            labelParasaikaJako.Margin = new Padding(4, 0, 4, 0);
             labelParasaikaJako.Name = "labelParasaikaJako";
-            labelParasaikaJako.Size = new Size(126, 21);
+            labelParasaikaJako.Size = new Size(259, 35);
             labelParasaikaJako.TabIndex = 18;
             labelParasaikaJako.Text = "Paras aika: ";
             // 
             // jakotehtavat
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(830, 450);
+            ClientSize = new Size(1186, 750);
             Controls.Add(labelParasaikaJako);
             Controls.Add(label2);
             Controls.Add(merkki);
@@ -157,7 +165,6 @@
             Controls.Add(laskulabel);
             Controls.Add(vastausTextBox);
             Controls.Add(label1);
-            Margin = new Padding(2);
             Name = "jakotehtavat";
             Text = "jakotehtavat";
             ResumeLayout(false);

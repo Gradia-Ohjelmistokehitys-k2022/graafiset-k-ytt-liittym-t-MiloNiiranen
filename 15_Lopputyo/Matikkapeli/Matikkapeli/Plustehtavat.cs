@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Media;
+using System.Reflection.Emit;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,21 +16,45 @@ namespace Matikkapeli
 {
     public partial class Plustehtavat : Form
     {
-        int _aika; // tämä on ajastimeen
+        int _aika; 
         int _oikeaVastaus;
         private int _oikeidenVastaustenLaskuri = 0;
-        List<int> _ajat = new List<int>();
+        List<int> _ajat;
+        MathUtility mathUtility;
 
 
-
-        public Plustehtavat()
+        public  Plustehtavat()
         {
             InitializeComponent();
+            mathUtility = new MathUtility(); 
+            _ajat = new List<int>();
 
             timer1.Start();
             lasku();
 
+            LataaAjat();
+            AsetaParasAikaLabelille();
+        }
 
+        private void LataaAjat()
+        { 
+           _ajat = mathUtility.LataaAjatPlus();
+        }
+
+        private void AsetaParasAikaLabelille()
+        {
+            if (_ajat.Count > 0)
+            {
+                int pieninAika = _ajat.Min();
+                int minuutit = pieninAika / 60;
+                int sekuntit = pieninAika % 60;
+
+                labelParasaikaPlus.Text = $"Paras aika: {minuutit:D2}:{sekuntit:D2}";
+            }
+            else
+            {
+                labelParasaikaPlus.Text = "Paras aika: -";
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -80,33 +106,13 @@ namespace Matikkapeli
 
                     timer1.Stop();
                     MessageBox.Show($"Aikasi on {_aika / 60} minuutti ja {_aika % 60} sekunttia");
-                    TallennaAika();
+                    mathUtility.TallennaAikaPlus(_aika);
                     _aika = 0;
                     timer1.Start();
                     _oikeidenVastaustenLaskuri = 0;
                     tehtäviätehty.Text = "0";
-
-
-
                 }
             }
-        }
-
-        private void TallennaAika()
-        {
-            _ajat.Add(_aika);
-
-            int pieninAika = _ajat.Min();
-            int minuutit = pieninAika / 60;
-            int sekuntit = pieninAika % 60;
-
-            labelParasaikaPlus.Text = $"Paras aika: {minuutit:D2}:{sekuntit:D2}";
-
-            using (StreamWriter sw = new StreamWriter("Parhaat_ajat.txt"))
-            {
-                sw.WriteLine(labelParasaikaPlus.Text);
-            }
-
         }
 
         private void OikeinAani()
