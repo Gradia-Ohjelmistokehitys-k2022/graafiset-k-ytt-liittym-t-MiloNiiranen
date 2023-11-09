@@ -34,7 +34,6 @@
             Miinusnappi = new Button();
             Kertonappi = new Button();
             jakonappi = new Button();
-            Käyttäjä = new Label();
             menuStrip1 = new MenuStrip();
             menuToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
@@ -118,19 +117,6 @@
             jakonappi.UseVisualStyleBackColor = false;
             jakonappi.Click += jakonappi_Click;
             // 
-            // Käyttäjä
-            // 
-            Käyttäjä.AutoSize = true;
-            Käyttäjä.BackColor = Color.Transparent;
-            Käyttäjä.Font = new Font("Sitka Text", 14.2499981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            Käyttäjä.ForeColor = Color.Black;
-            Käyttäjä.Location = new Point(13, 36);
-            Käyttäjä.Margin = new Padding(4, 0, 4, 0);
-            Käyttäjä.Name = "Käyttäjä";
-            Käyttäjä.Size = new Size(151, 42);
-            Käyttäjä.TabIndex = 7;
-            Käyttäjä.Text = "Käyttäjä:";
-            // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
@@ -161,7 +147,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.numero_tausta;
             ClientSize = new Size(1297, 917);
-            Controls.Add(Käyttäjä);
             Controls.Add(jakonappi);
             Controls.Add(Kertonappi);
             Controls.Add(Miinusnappi);
@@ -172,7 +157,6 @@
             Margin = new Padding(4, 5, 4, 5);
             Name = "Aloitusruutu";
             Text = "Aloitus";
-            Load += Aloitusruutu_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -187,7 +171,6 @@
         private Button Miinusnappi;
         private Button Kertonappi;
         private Button jakonappi;
-        private Label Käyttäjä;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem menuToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;

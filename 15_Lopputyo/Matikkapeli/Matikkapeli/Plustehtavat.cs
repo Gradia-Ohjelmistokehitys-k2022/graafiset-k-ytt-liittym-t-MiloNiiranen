@@ -64,14 +64,12 @@ namespace Matikkapeli
             int sekunnit = _aika % 60;
             Ajastin.Text = string.Format("{0:D2}:{1:D2}", minuutit, sekunnit);
             // Ajastin joka näyttää minuutit ja sekunnit labelillä
-
-
-
         }
         private int ArvoLuku()
         {
             Random random = new Random();
-            return random.Next(1, 11); // Arpoo satunnaisen luvun 1-10
+            return random.Next(1, 11);
+            // Arpoo luvun 1-10 välillä
         }
 
         private void lasku() // tämä kirjoitaa labeliin laskun mikä käyttäjän pitää laskea
@@ -86,7 +84,7 @@ namespace Matikkapeli
         {
             if (int.TryParse(vastausTextBox.Text, out int kayttajanVastaus))
             {
-                if (kayttajanVastaus == _oikeaVastaus)
+                if (kayttajanVastaus == _oikeaVastaus) // Jos oikein
                 {
                     OikeinAani();
                     lasku();
@@ -95,13 +93,13 @@ namespace Matikkapeli
                     tehtäviätehty.Text = $"{_oikeidenVastaustenLaskuri}";
                 }
 
-                else
+                else // Jos väärin
                 {
                     vaarinAani();
                     vastausTextBox.Clear();
                 }
 
-                if (_oikeidenVastaustenLaskuri == 10)
+                if (_oikeidenVastaustenLaskuri == 10) // Kun saanut kymmenen laskua oikein niin resetoi ajastimen ja kuinka monta tehtävää tehty
                 {
 
                     timer1.Stop();
@@ -133,7 +131,7 @@ namespace Matikkapeli
             this.Hide();
             this.Close();
             form1.ShowDialog();
-            // Nappi josta pääsee takaisin aloitus ruutuun
+            // Nappi joka vie takaisin aloitus ruutuun
         }
     }
 }
