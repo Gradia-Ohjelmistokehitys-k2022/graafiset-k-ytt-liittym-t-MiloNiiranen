@@ -35,11 +35,5 @@ namespace Matikkapeli
             this.Hide();
             form5.ShowDialog();
         }
-
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
     }
 }
