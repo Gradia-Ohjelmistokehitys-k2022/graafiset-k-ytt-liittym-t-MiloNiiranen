@@ -77,24 +77,5 @@ namespace Matikkapeli.Properties {
                 return ResourceManager.GetStream("_2aa79859_239d_45f3_99c8_3cacd6a4c3a0", resourceCulture);
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap numero_tausta {
-            get {
-                object obj = ResourceManager.GetObject("numero tausta", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        internal static string Parhaat_ajat {
-            get {
-                return ResourceManager.GetString("Parhaat_ajat", resourceCulture);
-            }
-        }
     }
 }

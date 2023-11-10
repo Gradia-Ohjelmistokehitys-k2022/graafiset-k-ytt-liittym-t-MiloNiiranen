@@ -144,7 +144,6 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.numero_tausta;
             ClientSize = new Size(1297, 917);
             Controls.Add(jakonappi);
             Controls.Add(Kertonappi);
