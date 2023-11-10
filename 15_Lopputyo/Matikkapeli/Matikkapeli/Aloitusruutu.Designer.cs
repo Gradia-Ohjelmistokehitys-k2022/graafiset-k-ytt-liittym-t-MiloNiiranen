@@ -35,19 +35,15 @@
             Kertonappi = new Button();
             jakonappi = new Button();
             menuStrip1 = new MenuStrip();
-            menuToolStripMenuItem = new ToolStripMenuItem();
-            exitToolStripMenuItem = new ToolStripMenuItem();
-            menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Impact", 18F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
-            label1.Location = new Point(394, 83);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(276, 50);
             label1.Name = "label1";
-            label1.Size = new Size(547, 77);
+            label1.Size = new Size(383, 46);
             label1.TabIndex = 0;
             label1.Text = "Tervetuloa Matikka Peliin";
             // 
@@ -56,10 +52,9 @@
             label2.BackColor = Color.LightGray;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label2.ForeColor = Color.Black;
-            label2.Location = new Point(326, 219);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(228, 131);
             label2.Name = "label2";
-            label2.Size = new Size(508, 38);
+            label2.Size = new Size(356, 23);
             label2.TabIndex = 1;
             label2.Text = "Valitse mitä laskutyyppiä haluat harjoitella";
             // 
@@ -69,10 +64,9 @@
             Plusnappi.BackgroundImageLayout = ImageLayout.None;
             Plusnappi.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Plusnappi.ForeColor = SystemColors.ActiveCaptionText;
-            Plusnappi.Location = new Point(476, 312);
-            Plusnappi.Margin = new Padding(4, 5, 4, 5);
+            Plusnappi.Location = new Point(333, 187);
             Plusnappi.Name = "Plusnappi";
-            Plusnappi.Size = new Size(223, 68);
+            Plusnappi.Size = new Size(156, 41);
             Plusnappi.TabIndex = 2;
             Plusnappi.Text = "Plus +";
             Plusnappi.UseVisualStyleBackColor = false;
@@ -80,12 +74,11 @@
             // 
             // Miinusnappi
             // 
-            Miinusnappi.BackColor = Color.Blue;
+            Miinusnappi.BackColor = Color.DodgerBlue;
             Miinusnappi.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            Miinusnappi.Location = new Point(476, 390);
-            Miinusnappi.Margin = new Padding(4, 5, 4, 5);
+            Miinusnappi.Location = new Point(333, 234);
             Miinusnappi.Name = "Miinusnappi";
-            Miinusnappi.Size = new Size(223, 68);
+            Miinusnappi.Size = new Size(156, 41);
             Miinusnappi.TabIndex = 3;
             Miinusnappi.Text = "Miinus -";
             Miinusnappi.UseVisualStyleBackColor = false;
@@ -95,10 +88,9 @@
             // 
             Kertonappi.BackColor = Color.Yellow;
             Kertonappi.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            Kertonappi.Location = new Point(476, 468);
-            Kertonappi.Margin = new Padding(4, 5, 4, 5);
+            Kertonappi.Location = new Point(333, 281);
             Kertonappi.Name = "Kertonappi";
-            Kertonappi.Size = new Size(223, 68);
+            Kertonappi.Size = new Size(156, 41);
             Kertonappi.TabIndex = 4;
             Kertonappi.Text = "Kerto x";
             Kertonappi.UseVisualStyleBackColor = false;
@@ -108,10 +100,9 @@
             // 
             jakonappi.BackColor = Color.FromArgb(0, 192, 0);
             jakonappi.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            jakonappi.Location = new Point(476, 547);
-            jakonappi.Margin = new Padding(4, 5, 4, 5);
+            jakonappi.Location = new Point(333, 328);
             jakonappi.Name = "jakonappi";
-            jakonappi.Size = new Size(223, 68);
+            jakonappi.Size = new Size(156, 41);
             jakonappi.TabIndex = 5;
             jakonappi.Text = "Jako /";
             jakonappi.UseVisualStyleBackColor = false;
@@ -120,31 +111,18 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1297, 33);
+            menuStrip1.Padding = new Padding(4, 1, 0, 1);
+            menuStrip1.Size = new Size(908, 24);
             menuStrip1.TabIndex = 8;
             menuStrip1.Text = "menuStrip1";
             // 
-            // menuToolStripMenuItem
-            // 
-            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exitToolStripMenuItem });
-            menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            menuToolStripMenuItem.Size = new Size(73, 29);
-            menuToolStripMenuItem.Text = "Menu";
-            // 
-            // exitToolStripMenuItem
-            // 
-            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(141, 34);
-            exitToolStripMenuItem.Text = "Exit";
-            // 
             // Aloitusruutu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1297, 917);
+            ClientSize = new Size(908, 550);
             Controls.Add(jakonappi);
             Controls.Add(Kertonappi);
             Controls.Add(Miinusnappi);
@@ -152,11 +130,8 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
-            Margin = new Padding(4, 5, 4, 5);
             Name = "Aloitusruutu";
             Text = "Aloitus";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -170,7 +145,5 @@
         private Button Kertonappi;
         private Button jakonappi;
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem menuToolStripMenuItem;
-        private ToolStripMenuItem exitToolStripMenuItem;
     }
 }
